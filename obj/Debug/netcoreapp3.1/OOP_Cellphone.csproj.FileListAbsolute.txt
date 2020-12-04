@@ -1,0 +1,13 @@
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\bin\Debug\netcoreapp3.1\OOP_Cellphone.exe
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\bin\Debug\netcoreapp3.1\OOP_Cellphone.deps.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\bin\Debug\netcoreapp3.1\OOP_Cellphone.runtimeconfig.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\bin\Debug\netcoreapp3.1\OOP_Cellphone.runtimeconfig.dev.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\bin\Debug\netcoreapp3.1\OOP_Cellphone.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\bin\Debug\netcoreapp3.1\OOP_Cellphone.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\obj\Debug\netcoreapp3.1\OOP_Cellphone.csprojAssemblyReference.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\obj\Debug\netcoreapp3.1\OOP_Cellphone.AssemblyInfoInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\obj\Debug\netcoreapp3.1\OOP_Cellphone.AssemblyInfo.cs
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\obj\Debug\netcoreapp3.1\OOP_Cellphone.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\obj\Debug\netcoreapp3.1\OOP_Cellphone.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\obj\Debug\netcoreapp3.1\OOP_Cellphone.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\OOP_Cellphone\obj\Debug\netcoreapp3.1\OOP_Cellphone.genruntimeconfig.cache
