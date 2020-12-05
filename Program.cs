@@ -15,7 +15,7 @@ namespace OOP_Cellphone
 
             Mobile cellphone = new Mobile();
 
-            cellphone.on = true;
+            cellphone.on = false;
                
             Console.WriteLine();
             Console.Write("Please type cellphone model:  ");
@@ -34,8 +34,15 @@ namespace OOP_Cellphone
             cellphone.cellHeight = float.Parse(Console.ReadLine());
             Console.WriteLine();
             Console.Clear();
+             
+             Console.ForegroundColor = ConsoleColor.Green;
+             Console.Write("*** Cellphone is currently turned off ***");
+             Console.ResetColor();
+             Console.WriteLine();
+             Console.WriteLine();
 
-            
+    do {
+
              Console.WriteLine();
              Console.WriteLine($"----{cellphone.cellModel}----");
              Console.WriteLine();
@@ -55,10 +62,18 @@ namespace OOP_Cellphone
              choice = int.Parse(Console.ReadLine());
 
             
+            
             switch (choice) {
 
                 
-                case 1:  
+                case 1: 
+
+                if (cellphone.on == true) {
+                    
+                    Console.WriteLine();
+                    Console.WriteLine("Cellphone is already turned on");
+                    
+                    } 
                 
                 cellphone.TurnOn(cellphone.on,cellphone.cellModel);
 
@@ -67,7 +82,9 @@ namespace OOP_Cellphone
             Console.WriteLine();
             Console.WriteLine($"Please type in your password to unlock {cellphone.cellModel} :\n");
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             password = Console.ReadLine();
+            Console.ResetColor();
             PerformLogin(password);
             
                     } while (password != "071188");
@@ -79,14 +96,17 @@ namespace OOP_Cellphone
                     Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.DarkBlue;
                     Console.WriteLine($"Welcome to {cellphone.cellModel}");
+                    Console.WriteLine();
+                    Console.WriteLine("Cellphone is now turned on");
                     Console.ResetColor();
                     return true;
                 
                     } else {
                     
+                    Console.Clear();
                     Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Password Denied");
+                    Console.WriteLine("Password Denied, please try again");
                     Console.ResetColor();
                     return false; 
             
@@ -98,6 +118,15 @@ namespace OOP_Cellphone
             
                 
                 case 2: 
+
+                if (cellphone.on == false) {
+                    
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine();
+                    Console.WriteLine("Cellphone is already turned off");
+                    Console.ResetColor();
+                }
                 
                 cellphone.TurnOFF(cellphone.on);
 
@@ -105,12 +134,27 @@ namespace OOP_Cellphone
             
             
             
-                case 3:  
+                case 3: 
+
+                if (cellphone.on == false) {
+
+                   Console.Clear();
+                   Console.WriteLine();
+                   Console.ForegroundColor = ConsoleColor.Yellow;
+                   Console.WriteLine("Please turn on cellphone");
+                   Console.ResetColor();
                 
+                } 
+                
+                else {
+                
+                Console.WriteLine();
                 Console.WriteLine("Please type the number you wish to call: \n");
-                int phoneNumber = int.Parse(Console.ReadLine());
+                string phoneNumber = Console.ReadLine();
             
                 cellphone.MakeCall(phoneNumber);
+
+                }
             
                 break;
 
@@ -118,13 +162,29 @@ namespace OOP_Cellphone
                 
                 case 4:
 
+                if (cellphone.on == false) {
+
+                   Console.Clear();
+                   Console.WriteLine();
+                   Console.ForegroundColor = ConsoleColor.Yellow;
+                   Console.WriteLine("Please turn on cellphone");
+                   Console.ResetColor();
+                
+                } 
+
+                else {
+                    
+                Console.WriteLine();
                 Console.WriteLine("Please type the number you wish to send a SMS message: \n");
-                int messageNumber = int.Parse(Console.ReadLine());
-            
+                string messageNumber = Console.ReadLine();
+
+                Console.WriteLine();
                 Console.WriteLine("Please type your message below:\n ");
                 string cellMessage = Console.ReadLine();
 
                 cellphone.SendMessage(messageNumber,cellMessage);
+
+                }
             
                 break;
 
@@ -132,25 +192,39 @@ namespace OOP_Cellphone
 
                 case 5:
 
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine();
-                Console.WriteLine($"{cellphone.cellModel}"); 
+                Console.WriteLine($"model: {cellphone.cellModel}"); 
                 Console.WriteLine();
-                Console.WriteLine($"{cellphone.cellColor}"); 
+                Console.WriteLine($"color: {cellphone.cellColor}"); 
                 Console.WriteLine();
-                Console.WriteLine($"{cellphone.cellWidth} mm"); 
+                Console.WriteLine($"width: {cellphone.cellWidth} mm"); 
                 Console.WriteLine();
-                Console.WriteLine($"{cellphone.cellHeight} mm"); 
+                Console.WriteLine($"height: {cellphone.cellHeight} mm"); 
                 Console.WriteLine();
+                Console.ResetColor();
         
                 break;
         
         
         
-                default: Console.WriteLine("Please choose a valid option number");
+                default: 
+                
+                Console.Clear();
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Please choose a valid option number");
+                Console.ResetColor();
         
                 break;
+    
+            } 
+            
+    
+    } while (choice != 2);
         
-            }
+        
         }
     }
 }
